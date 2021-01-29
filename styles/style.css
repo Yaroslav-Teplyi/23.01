@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "GregorianFLF";
+    src: url(../fonts/GregorianFLF.ttf);
+}
+
+@font-face {
+    font-family: "Lucida Bright";
+    src: url(../fonts/Lucida\ Bright.ttf);
+}
+
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-image: url(../img/black/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.234);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* display: none; */
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    font-family: "Lucida Bright", serif;
+    color: rgb(206, 204, 204);
+}
+
+a:hover {
+    background: rgb(119, 119, 119);
+    color: rgb(240, 240, 240);
+}
+
+a:focus {
+    background: rgb(216, 216, 216);
+    border-bottom: none;
+    color: #000;
+}
+
+.slide {
+    position: absolute;
+    width: 1200px;
+    height: 720px;
+    background: rgba(255, 255, 255, 0.234);
+    opacity: 0;
+    z-index: 0;
+    padding: 55px 20px 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container .slide:nth-child(2) {
+    padding-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide__title {
+    font-family: "GregorianFLF", serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 45px;
+    opacity: 0;
+}
+
+.slide .info__img {
+    width: 500px;
+    height: 50%;
+    position: relative;
+    right: -10000px;
+    opacity: 0.9;
+}
+
+.slide__copyright {
+    font-family: "Lucida Bright", serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info__desc {
+    font-family: "Lucida Bright", serif;
+    font-size: 28px;
+    padding-right: 20px;
+    font-weight: bold;
+    opacity: 0;
+}
+
+a:focus + .slide .info__desc {
+    transition: opacity 4.5s;
+    opacity: 1;
+}
+
+a:focus + .slide .slide__title {
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+a:focus + .slide .info__img {
+    transition: transform 1s;
+    transition-delay: 0.6s;
+    transform: translateX(-10000px);
+}
+
+a:focus + .slide {
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 1;
+}
