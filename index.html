@@ -6,60 +6,157 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-
-    <!-- <div class="start">
-        <form action="#" class="form">
-            <h3 class="form__title">Choose the presentation topic you want to see:</h3>
-            <ul>
-                <li>
-                    <input type="radio" name="" id=""><label for=""></label>
-                </li>
-            </ul>
-        </form>
-    </div> -->
-
-    <div class="black container">
-        <a href="#">Slide 1</a>
-        <div class="slide">
-            <h1 class="slide__title">Black Metal</h1>
-            <p class="slide__copyright">Presentation have been done by Yarik Teplyi</p>
-        </div>
-
-        <a href="#">Slide 2</a>
-        <div class="slide">
-            <h2 class="slide__title">immortal</h2>
-            <div class="info">
-                <p class="info__desc">
-                    Immortal is a Norwegian black metal band from Bergen. The group was founded in 1991 by frontman and guitarist Abbath and guitarist Demonaz. The pair worked with various drummers, and were later joined by current drummer Horgh in 1996. Immortal's lyrics are based on an overall theme, a realm called Blashyrkh, which is said to be "demon-and-battle-filled" and a "fusion of gothic, Nordic, and heroic themes.
-                </p>
-                <img src="img/black/immortal.jpg" alt="cover" class="info__img">
+<body id="body">
+    <div class="body-inner">
+        <div class="start">
+            <form action="#" class="form">
+                <h3 class="form__title">Choose the presentation topic you want to see:</h3>
+                <ul class="form__menu">
+                    <li class="form__item" id="crapItem">
+                        <input type="radio" name="presentationTopic" id="crapRadio"><label for="crapRadio">Rap / Pop</label>
+                    </li>
+                    <li class="form__item">
+                        <input type="radio" name="presentationTopic" id="blackRadio"><label for="blackRadio">Black Metal</label>
+                    </li>
+                    <li class="form__item">
+                        <input type="radio" name="presentationTopic" id="thrashRadio"><label for="thrashRadio">Thrash Metal</label>
+                    </li>
+                    <li class="form__item">
+                        <input type="radio" name="presentationTopic" id="punkRadio"><label for="punkRadio">Punk</label>
+                    </li>
+                </ul>
+                <a class="form__confirm btn" onclick="confirmMusicGenre()">Confirm!</a>
+            </form>
+            <div class="poser disabled">
+                <img src="img/other/1.jpg" alt="poser" class="poser__img">
+                <h2 class="poser__title">Get back and to choose the MUSIC genre!</h2>
+                <a class="poser__confirm btn" onclick="getBack()">Get back</a>
             </div>
         </div>
 
-        <a href="#">Slide 3</a>
-        <div class="slide">
-            <h2 class="slide__title">furfur</h2>
-            <div class="info">
-                <p class="info__desc">
-                    Furfur is a French raw black metal band from Saint-Nazaire. This is one-man band founded in 2017 by Berith. Furfur's lyrics are based on anti-religion, philosophy, sadness. My favorite songs are Ultra Violence and L'éclat du passé.
-                </p>
-                <img src="img/black/furfur.jpg" alt="cover" class="info__img">
+        <div class="black container">
+            <a href="#">Slide 1</a>
+            <div class="slide">
+                <h1 class="slide__title">Black Metal</h1>
+                <p class="slide__copyright">Presentation have been done by Yarik Teplyi</p>
+            </div>
+
+            <a href="#">Slide 2</a>
+            <div class="slide">
+                <h2 class="slide__title">immortal</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Immortal is a Norwegian black metal band from Bergen. The group was founded in 1991 by frontman and guitarist Abbath and guitarist Demonaz. The pair worked with various drummers, and were later joined by current drummer Horgh in 1996. Immortal's lyrics are based on an overall theme, a realm called Blashyrkh, which is said to be "demon-and-battle-filled" and a "fusion of gothic, Nordic, and heroic themes.
+                    </p>
+                    <img src="img/black/immortal.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+
+            <a href="#">Slide 3</a>
+            <div class="slide">
+                <h2 class="slide__title">furfur</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Furfur is a French raw black metal band from Saint-Nazaire. This is one-man band founded in 2017 by Berith. Furfur's lyrics are based on anti-religion, philosophy, sadness. My favorite songs are Ultra Violence and L'éclat du passé.
+                    </p>
+                    <img src="img/black/furfur.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+
+            <a href="#">Slide 4</a>
+            <div class="slide">
+                <h2 class="slide__title">none</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        None is an US Atmospheric/Depressive Black Metal band from Portland. The group was founded in 2015. Members are unknown. None's lyrics are based on misery, grief, alcoholism. I like to listen to his two albums Damp Chill of Life and Life Has Gone On Long Enough.
+                    </p>
+                    <img src="img/black/none.jpg" alt="cover" class="info__img">
+                </div>
             </div>
         </div>
 
-        <a href="#">Slide 4</a>
-        <div class="slide">
-            <h2 class="slide__title">none</h2>
-            <div class="info">
-                <p class="info__desc">
-                    None is an US Atmospheric/Depressive Black Metal band from Portland. The group was founded in 2015. Members are unknown. None's lyrics are based on misery, grief, alcoholism. I like to listen to his two albums Damp Chill of Life and Life Has Gone On Long Enough.
-                </p>
-                <img src="img/black/none.jpg" alt="cover" class="info__img">
+        <div class="punk container">
+            <a href="#">Slide 1</a>
+            <div class="slide">
+                <h1 class="slide__title">Punk</h1>
+                <p class="slide__copyright">Presentation have been done by Yarik Teplyi</p>
+            </div>
+
+            <a href="#">Slide 2</a>
+            <div class="slide">
+                <h2 class="slide__title">The Wipers</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Wipers was a punk rock band formed in Portland, Oregon, in 1977 by guitarist Greg Sage, along with drummer Sam Henry and bassist Dave Koupal. The group's tight song structure and use of heavy distortion were hailed as extremely influential by numerous critics and musicians. My favorite albums are Over the Edge and Is this Real?
+                    </p>
+                    <img src="img/punk/wipers.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+
+            <a href="#">Slide 3</a>
+            <div class="slide">
+                <h2 class="slide__title">Black Flag</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Black Flag is an American punk rock band formed in 1976 in Hermosa Beach, California. They are widely considered to be one of the first hardcore punk bands, as well as one of the pioneers of post-hardcore. My favorite albums are My War and Damaged.
+                    </p>
+                    <img src="img/punk/flag.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+
+            <a href="#">Slide 4</a>
+            <div class="slide">
+                <h2 class="slide__title">Wire</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Wire are an English rock band, formed in London in October 1976 by Colin Newman, Graham Lewis, Bruce Gilbert and Robert Grey. They were originally associated with the punk rock scene, appearing on The Roxy London WC2 album, and were later central to the development of post-punk, while their debut album Pink Flag was influential for hardcore punk. 
+                    </p>
+                    <img src="img/punk/wire.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+        </div>
+
+        <div class="thrash container">
+            <a href="#">Slide 1</a>
+            <div class="slide">
+                <h1 class="slide__title">Thrash Metal</h1>
+                <p class="slide__copyright">Presentation have been done by Yarik Teplyi</p>
+            </div>
+
+            <a href="#">Slide 2</a>
+            <div class="slide">
+                <h2 class="slide__title">Metallica</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Metallica is an American thrash metal band. The band was formed in 1981 in Los Angeles by vocalist/guitarist James Hetfield and drummer Lars Ulrich, and has been based in San Francisco for most of its career.[1][2] The band's fast tempos, instrumentals and aggressive musicianship made them one of the founding "big four" bands of thrash metal, alongside Megadeth, Anthrax and Slayer. My favorite albums are Ride The Lightning and Kill 'Em All.
+                    </p>
+                    <img src="img/thrash/metallica.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+
+            <a href="#">Slide 3</a>
+            <div class="slide">
+                <h2 class="slide__title">exodus</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Exodus is an American thrash metal band formed in 1979 in Richmond, California. They have gone through numerous lineup changes, two extended hiatuses, and the deaths of two former band members. Their current lineup consists of guitarists Gary Holt and Lee Altus, bassist Jack Gibson, drummer Tom Hunting, and lead vocalist Steve "Zetro" Souza. Bonded By Blood is my favorite album of Exodus
+                    </p>
+                    <img src="img/thrash/exodus.jpg" alt="cover" class="info__img">
+                </div>
+            </div>
+
+            <a href="#">Slide 4</a>
+            <div class="slide">
+                <h2 class="slide__title">sodom</h2>
+                <div class="info">
+                    <p class="info__desc">
+                        Sodom is a German thrash metal band from Gelsenkirchen, formed in 1981. Along with Kreator, Destruction and Tankard, Sodom has been referred to as one of the "Big Four" of Teutonic thrash metal. In The Sign of Evil is my favorite album of Sodom.
+                    </p>
+                    <img src="img/thrash/sodom.jpg" alt="cover" class="info__img">
+                </div>
             </div>
         </div>
     </div>
-
-
+<script src="js.js"></script>
 </body>
 </html>
