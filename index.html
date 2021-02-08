@@ -9,28 +9,28 @@
 <body id="body">
     <div class="body-inner">
         <div class="start">
-            <form action="#" class="form">
+            <form action="#" method="dialog" class="form">
                 <h3 class="form__title">Choose the presentation topic you want to see:</h3>
                 <ul class="form__menu">
                     <li class="form__item" id="crapItem">
-                        <input type="radio" name="presentationTopic" id="crapRadio"><label for="crapRadio">Rap / Pop</label>
+                        <input class="form__radioInput" type="radio" name="presentationTopic" id="crapRadio"><label for="crapRadio">Rap / Pop</label>
                     </li>
                     <li class="form__item">
-                        <input type="radio" name="presentationTopic" id="blackRadio"><label for="blackRadio">Black Metal</label>
+                        <input class="form__radioInput" type="radio" name="presentationTopic" id="blackRadio"><label for="blackRadio">Black Metal</label>
                     </li>
                     <li class="form__item">
-                        <input type="radio" name="presentationTopic" id="thrashRadio"><label for="thrashRadio">Thrash Metal</label>
+                        <input class="form__radioInput" type="radio" name="presentationTopic" id="thrashRadio"><label for="thrashRadio">Thrash Metal</label>
                     </li>
                     <li class="form__item">
-                        <input type="radio" name="presentationTopic" id="punkRadio"><label for="punkRadio">Punk</label>
+                        <input class="form__radioInput" type="radio" name="presentationTopic" id="punkRadio"><label for="punkRadio">Punk</label>
                     </li>
                 </ul>
-                <a class="form__confirm btn" onclick="confirmMusicGenre()">Confirm!</a>
+                <button class="form__confirm btn" onclick="confirmMusicGenre()" id="33" disabled>Confirm!</button>
             </form>
             <div class="poser disabled">
                 <img src="img/other/1.jpg" alt="poser" class="poser__img">
                 <h2 class="poser__title">Get back and to choose the MUSIC genre!</h2>
-                <a class="poser__confirm btn" onclick="getBack()">Get back</a>
+                <button class="poser__confirm btn" onclick="getBack()">Get back</button>
             </div>
         </div>
 

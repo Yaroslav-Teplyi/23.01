@@ -11,31 +11,34 @@ let crapRadio = document.getElementById('crapRadio'),
     black = document.querySelector('.black'),
     thrash = document.querySelector('.thrash'),
     punk = document.querySelector('.punk'),
-    crapItem = document.getElementById('crapItem');
+    crapItem = document.getElementById('crapItem'),
+    radioInput = document.querySelectorAll('.form__radioInput');
+
+radioInput.forEach(elem => {
+  elem.addEventListener('click', function(event) {
+    document.querySelector('.form__confirm').disabled = false;
+  });
+});
 
 function confirmMusicGenre() {
     if (crapRadio.checked) {
         form.classList.add('disabled')
         poser.classList.remove('disabled')
-        console.log(1)
         return
     } else if (blackRadio.checked) {
         startBlock.classList.add('disabled')
         body.classList.add('black_bg')
         black.classList.add('active')
-        console.log(2)
         return
     } else if (thrashRadio.checked) {
         startBlock.classList.add('disabled')
         body.classList.add('thrash_bg')
         thrash.classList.add('active')
-        console.log(3)
         return
     } else if (punkRadio.checked) {
         startBlock.classList.add('disabled')
         body.classList.add('punk_bg')
         punk.classList.add('active')
-        console.log(4)
         return
     }
 }
